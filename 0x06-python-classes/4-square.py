@@ -5,6 +5,7 @@ Description of a square class
 
 """
 
+
 class Square:
     """square shape
 
