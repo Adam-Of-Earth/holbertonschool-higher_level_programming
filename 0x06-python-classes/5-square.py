@@ -38,6 +38,7 @@ class Square:
         """
 
         self.size = size
+
     def my_print(self):
         """prints a square"""
         if self.__size == 0:
