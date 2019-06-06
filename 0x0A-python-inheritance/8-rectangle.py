@@ -4,6 +4,7 @@
 
 class BaseGeometry:
     """base class"""
+
     def area(self):
         """gets area"""
         raise(Exception("area() is not implemented"))
@@ -14,3 +15,14 @@ class BaseGeometry:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
+
+
+class Rectangle (BaseGeometry):
+    """A rectangle with height and width"""
+
+    def __init__(self, width, height):
+        """instantiate of a rectangle"""
+        super().integer_validator("width", width)
+        self.__width = width
+        super().integer_validator("height", height)
+        self.__height = height
