@@ -4,4 +4,3 @@
 
 class BaseGeometry:
     """empty class"""
-    
