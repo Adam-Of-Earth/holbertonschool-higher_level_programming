@@ -92,3 +92,18 @@ class Rectangle(Base):
         """return representation of a rectangle"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args, **kwargs):
+        """update attributes"""
+        if len(args) > 0:
+            attrs = ('id', 'width', 'height', 'x', 'y')
+            for name, value in zip(attrs, args):
+                setattr(self, name, value)
+        else:
+            self.id = kwargs.get('id', self.id)
+            self.width = kwargs.get('width', self.width)
+            self.height = kwargs.get('height', self.height)
+            self.x = kwargs.get('x', self.x)
+            self.y = kwargs.get('y', self.y)
+
+    
