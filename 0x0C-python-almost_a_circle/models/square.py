@@ -38,3 +38,12 @@ class Square(Rectangle):
             self.size = kwargs.get('size', self.size)
             self.x = kwargs.get('x', self.x)
             self.y = kwargs.get('y', self.y)
+
+    def to_dictionary(self):
+        """dictionary of square"""
+        dic = {
+            "id": self.id,
+            "size": self.__size,
+            "x": self.x,
+            "y": self.y}
+        return dic
