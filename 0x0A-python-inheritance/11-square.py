@@ -35,6 +35,7 @@ class Rectangle(BaseGeometry):
         """Replacing print with something else"""
         return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
 
+
 class Square(Rectangle):
     """Class that creates a square"""
 
