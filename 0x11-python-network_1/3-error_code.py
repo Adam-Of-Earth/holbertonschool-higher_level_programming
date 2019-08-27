@@ -10,7 +10,7 @@ if __name__ == "__main__":
     url = argv[1]
     request = request.Request(url)
     try:
-        with request.urlopen(reqst) as response:
+        with request.urlopen(request) as response:
             print(response.read().decode('urf-8'))
     except error.HTTPError as err:
         print("Error code: {}".format(err.code))
