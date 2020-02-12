@@ -9,9 +9,9 @@ request.get(
     let count = 0;
     for (const film of body.results) {
       for (const person of film.characters) {
-	if (person.indexOf('people/18') >= 0) {
-	  count++;
-	}
+        if (person.indexOf('people/18') >= 0) {
+          count++;
+        }
       }
     }
     console.log(count);
